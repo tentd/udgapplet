@@ -3,8 +3,10 @@ import java.awt.event._
 
 class UDGApplet extends JApplet {
     val text = new JTextArea()
+    val geometry = new GeometryPanel()
     override def init() {
-        getContentPane().add("Center", new JScrollPane(text))
+        // add("Center", new JScrollPane(text))
+        add("Center", geometry)
         text.append("init\n")
     }
     override def start() {
@@ -14,3 +16,4 @@ class UDGApplet extends JApplet {
         text.append("stopped\n");
     }
 }
+
